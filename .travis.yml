@@ -3,11 +3,11 @@ services:
   - docker
 
 before_install:
-  - docker build -t mohesk/docker-react -f Dockerfile.dev .
+  - docker build -t stephengrider/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run mohesk/docker-react npm run test -- --coverage
-
+  - docker run stephengrider/docker-react npm run test -- --coverage
+  
 deploy:
   provider: elasticbeanstalk
   region: "eu-west-1"
